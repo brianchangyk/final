@@ -8,7 +8,7 @@
         <version>3.0.3</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>com.programming.techie</groupId>
+    <groupId>com.programming.SpringBootAngular</groupId>
     <artifactId>spring-reddit-clone</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>spring-reddit-clone</name>

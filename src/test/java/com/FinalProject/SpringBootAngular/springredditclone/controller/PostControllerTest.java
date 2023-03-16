@@ -1,4 +1,4 @@
-package com.programming.techie.springredditclone.controller;
+package com.FinalProject.SpringBootAngular.springredditclone.controller;
 
 import org.hamcrest.Matchers;
 import org.junit.jupiter.api.DisplayName;

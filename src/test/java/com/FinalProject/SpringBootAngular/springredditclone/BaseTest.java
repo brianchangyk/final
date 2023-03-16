@@ -1,4 +1,4 @@
-package com.programming.techie.springredditclone;
+package com.FinalProject.SpringBootAngular.springredditclone;
 
 import org.testcontainers.containers.MySQLContainer;
 

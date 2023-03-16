@@ -1,8 +1,8 @@
-package com.programming.techie.springredditclone.repository;
+package com.FinalProject.SpringBootAngular.springredditclone.repository;
 
+import com.FinalProject.SpringBootAngular.springredditclone.BaseTest;
 import com.FinalProject.SpringBootAngular.springredditclone.model.User;
 import com.FinalProject.SpringBootAngular.springredditclone.repository.UserRepository;
-import com.programming.techie.springredditclone.BaseTest;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;

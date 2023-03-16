@@ -1,4 +1,4 @@
-package com.programming.techie.springredditclone.service;
+package com.FinalProject.SpringBootAngular.springredditclone.service;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;

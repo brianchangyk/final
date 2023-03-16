@@ -5,7 +5,7 @@
             "name": "Spring Boot-SpringRedditCloneApplication<spring-reddit-clone>",
             "request": "launch",
             "cwd": "${workspaceFolder}",
-            "mainClass": "com.programming.techie.springredditclone.SpringRedditCloneApplication",
+            "mainClass": "com.programming.SpringBootAngular.springredditclone.SpringRedditCloneApplication",
             "projectName": "spring-reddit-clone",
             "args": "",
             "envFile": "${workspaceFolder}/.env"

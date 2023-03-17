@@ -1,0 +1,24 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-SpringRedditCloneApplication<spring-reddit-clone>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.programming.SpringBootAngular.springredditclone.SpringRedditCloneApplication",
+            "projectName": "spring-reddit-clone",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-SpringRedditCloneApplication<spring-reddit-clone>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.FinalProject.SpringBootAngular.springredditclone.SpringRedditCloneApplication",
+            "projectName": "spring-reddit-clone",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}

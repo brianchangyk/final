@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: com.FinalProject.SpringBootAngular.springredditclone.repository.PostRepositoryTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.059 s <<< FAILURE! - in com.FinalProject.SpringBootAngular.springredditclone.repository.PostRepositoryTest
+shouldSavePost  Time elapsed: 0.005 s  <<< ERROR!
+java.lang.ExceptionInInitializerError
+Caused by: java.lang.IllegalStateException: Could not find a valid Docker environment. Please see logs and check configuration
+

@@ -16,6 +16,7 @@
 
     <properties>
         <java.version>17</java.version>
+        <kotlin.version>1.8.0</kotlin.version>
         <org.mapstruct.version>1.5.3.Final</org.mapstruct.version>
         <testcontainers.version>1.17.6</testcontainers.version>
     </properties>
@@ -37,6 +38,11 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
+        <dependency>
+			<groupId>org.postgresql</groupId>
+			<artifactId>postgresql</artifactId>
+			<scope>runtime</scope>
+		</dependency>
 
         <dependency>
             <groupId>com.mysql</groupId>
@@ -135,7 +141,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.8.1</version> <!-- or newer version -->
+                <version>3.10.1</version> <!-- or newer version -->
                 <configuration>
                     <source>${java.version}</source> <!-- depending on your project -->
                     <target>${java.version}</target> <!-- depending on your project -->
@@ -159,8 +165,8 @@
                 </configuration>
             </plugin>
             <plugin>
-                <groupId>org.jetbrains.kotlin</groupId>
                 <artifactId>kotlin-maven-plugin</artifactId>
+                <groupId>org.jetbrains.kotlin</groupId>
                 <version>${kotlin.version}</version>
                 <executions>
                     <execution>
@@ -171,8 +177,21 @@
                         </goals>
                         <configuration>
                             <sourceDirs>
-                                <source>src/main/java</source>
-                                <source>target/generated-sources/annotations</source>
+                                <sourceDir>src/main/java</sourceDir>
+                                <sourceDir>target/generated-sources/annotations</sourceDir>
+                            </sourceDirs>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>test-compile</id>
+                        <phase>process-test-sources</phase>
+                        <goals>
+                            <goal>test-compile</goal>
+                        </goals>
+                        <configuration>
+                            <sourceDirs>
+                                 <sourceDir>src/main/java</sourceDir>
+                                <sourceDir>target/generated-sources/annotations</sourceDir>
                             </sourceDirs>
                         </configuration>
                     </execution>

@@ -1,0 +1,6 @@
+com\FinalProject\SpringBootAngular\springredditclone\repository\PostRepositoryTest.class
+com\FinalProject\SpringBootAngular\springredditclone\repository\UserRepositoryTest.class
+com\FinalProject\SpringBootAngular\springredditclone\service\CommentServiceTest.class
+com\FinalProject\SpringBootAngular\springredditclone\controller\PostControllerTest.class
+com\FinalProject\SpringBootAngular\springredditclone\BaseTest.class
+com\FinalProject\SpringBootAngular\springredditclone\service\PostServiceTest.class

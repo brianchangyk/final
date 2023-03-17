@@ -1,6 +1,9 @@
 package com.FinalProject.SpringBootAngular.springredditclone.service;
 
-import lombok.AllArgsConstructor;
+import java.time.Instant;
+import java.util.Optional;
+import java.util.UUID;
+
 import org.springframework.security.authentication.AnonymousAuthenticationToken;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -12,6 +15,7 @@ import org.springframework.security.oauth2.jwt.Jwt;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.FinalProject.SpringBootAngular.springredditclone.config.AppConfig;
 import com.FinalProject.SpringBootAngular.springredditclone.dto.AuthenticationResponse;
 import com.FinalProject.SpringBootAngular.springredditclone.dto.LoginRequest;
 import com.FinalProject.SpringBootAngular.springredditclone.dto.RefreshTokenRequest;
@@ -24,9 +28,7 @@ import com.FinalProject.SpringBootAngular.springredditclone.repository.UserRepos
 import com.FinalProject.SpringBootAngular.springredditclone.repository.VerificationTokenRepository;
 import com.FinalProject.SpringBootAngular.springredditclone.security.JwtProvider;
 
-import java.time.Instant;
-import java.util.Optional;
-import java.util.UUID;
+import lombok.AllArgsConstructor;
 
 @Service
 @AllArgsConstructor
@@ -40,6 +42,7 @@ public class AuthService {
     private final AuthenticationManager authenticationManager;
     private final JwtProvider jwtProvider;
     private final RefreshTokenService refreshTokenService;
+    private final AppConfig appConfig;
 
     public void signup(RegisterRequest registerRequest) {
         User user = new User();
@@ -55,7 +58,7 @@ public class AuthService {
         mailService.sendMail(new NotificationEmail("Please Activate your Account",
                 user.getEmail(), "Thank you for signing up to Spring Reddit, " +
                         "please click on the below url to activate your account : " +
-                        "http://localhost:8080/api/auth/accountVerification/" + token));
+                        appConfig.getAppUrl() + token));
     }
 
     @Transactional(readOnly = true)
